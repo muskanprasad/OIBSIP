@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="styless.css">
+    <title>Login Authentication</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="switch">
+            <div class="signup" onclick="tab2();">Signup</div>
+            <div class="login" onclick="tab1();">Login</div>
+        </div>
+        
+        <div class="outer">
+            <form id="form">
+                <div id="page">
+                    <label>Registration Form</label>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name">
+                        <span class="fas fa-user"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="E-mail">
+                        <span class="fas fa-at"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Password">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="Confirm Password">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                    <button type="submit" id="btn1">Sign Up</button>
+                </div>
+                <div id="page">
+                    <label>Log-in Form</label>
+                    <div class="form-group">
+                        <input type="text" placeholder="Username">
+                        <span class="fas fa-user"></span>
+                    </div>    
+                    <div class="form-group">
+                        <input type="password" placeholder="Password">
+                        <span class="fas fa-lock"></span>
+                    </div>
+                    <button type="submit" class="btn2" onclick="auth()">Login</button>
+                </div>
+            </form>
+        </div>   
+    </div>
+    <script>
+        function auth(){
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            if(email == "muskanprasad327@gmail.com" && password == "bdhxvdmsiv845Dbfhbfh"){
+                window.location.assign("project.html");
+                alert("Successful");
+            }
+            else{
+                alert("Unsuccessful");
+                return;
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
